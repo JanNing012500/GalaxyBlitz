@@ -2,17 +2,17 @@ title = "Galaxy Blitz";
  
 description = 
 `
-Click to
-Change 
-Direction
+ CLICK TO CHANGE 
+ DIRECTION
  
-Hold to
-Stay still
+ HOLD TO STOP
  
-Collect 
-Coins
-To 
-Power Up
+ GRAB COINS TO
+ POWERUP
+
+ MAX YOUR STATS
+ TO ENTER
+ BLITZ TIME
 `;
  
 characters = [
@@ -270,26 +270,25 @@ let waveCount;
                                                                                 });
                                                                             }
  var blitztime = false;
-
+                                                                
  function update() {
-    
-
     //
     if (!ticks) {
         
-
-        stars = times(40, () => { //number of stars
-            
-            const posX = rnd(0, G.WIDTH);
-            const posY = rnd(0, G.HEIGHT);
-            
-            return {
+    //stars
+    stars = times(40, () => { //number of stars
                 
-                pos: vec(posX, posY),
-                
-                speed: rnd(G.STAR_SPEED_MIN, G.STAR_SPEED_MAX)
-            };
-        });
+        const posX = rnd(0, G.WIDTH);
+        const posY = rnd(0, G.HEIGHT);
+        
+        return {
+            
+            pos: vec(posX, posY),
+            
+            speed: rnd(G.STAR_SPEED_MIN, G.STAR_SPEED_MAX)
+        };
+    });
+        
         
  
         player = {
@@ -330,24 +329,7 @@ if (enemies.length === 0) {
 }
 
  
-//stars
 
-stars.forEach((s) => {
-
-        
-    var starcolors= ["red","green","blue"];
-
-    var starcolor = starcolors[Math.floor(Math.random()*starcolors.length)];
-
-
-    s.pos.y += s.speed*(difficulty);  
-    if (s.pos.y > G.HEIGHT) s.pos.y = 0;
-        
-     // @ts-ignore
-    color(starcolor);      
-        
-    box(s.pos, 1);
-});
 
 //Player Engine Particles
 color("yellow");
@@ -434,6 +416,33 @@ var blitztime = false;
 }
 
 
+
+stars.forEach((s) => {
+
+    if (blitztime==true)
+    {
+    
+    var starcolors= ["red","green","blue"];
+
+    var starcolor = starcolors[Math.floor(Math.random()*starcolors.length)];
+
+
+    s.pos.y += s.speed*(difficulty);  
+    if (s.pos.y > G.HEIGHT) s.pos.y = 0;
+        
+     // @ts-ignore
+    color(starcolor);      
+        
+    box(s.pos, 1);
+    }
+    if (blitztime==false)
+    {  
+    s.pos.y += s.speed*(difficulty);  
+    if (s.pos.y > G.HEIGHT) s.pos.y = 0;
+    color("light_black");       
+    box(s.pos, 1);
+    }
+});
  
  
 fBullets.forEach((fb) => {
