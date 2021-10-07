@@ -1,3 +1,5 @@
+//Made by Jan Ning using Abagames crisp-game-lib
+//Game inspired by CHARGERUSH by abagames
 title = "Galaxy Blitz";
  
 description = 
@@ -639,7 +641,7 @@ remove(eBullets, (eb) => {
         
         if(G.PLAYER_BULLET_SIZE<5)
         {
-        G.PLAYER_BULLET_SIZE = G.PLAYER_BULLET_SIZE + .2 ; //.1 for normal, .5 for easy, .75 for baby
+        G.PLAYER_BULLET_SIZE = G.PLAYER_BULLET_SIZE + .2 ; //.1 for normal, .2 for easy, .5 for baby
         }
     }
         
