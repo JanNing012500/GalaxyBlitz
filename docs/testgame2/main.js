@@ -7,7 +7,7 @@ a
  
 characters = [
 `
-  pp
+  p
   ll
 llllll
 ccllcc
