@@ -1,20 +1,8 @@
-//Made by Jan Ning using Abagames crisp-game-lib
-//Game inspired by CHARGERUSH by abagames
-title = "Galaxy Blitz";
+title = "testgame2";
  
 description = 
 `
- CLICK TO CHANGE 
- DIRECTION
- 
- HOLD TO STOP
- 
- GRAB COINS TO
- POWERUP
-
- MAX YOUR STATS
- TO ENTER
- BLITZ TIME
+a
 `;
  
 characters = [
