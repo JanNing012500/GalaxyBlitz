@@ -1,6 +1,6 @@
 //Made by Jan Ning using Abagames crisp-game-lib
 //Game inspired by CHARGERUSH by abagames
-//A
+//AAA
 title = "Galaxy Blitz";
  
 description = 
